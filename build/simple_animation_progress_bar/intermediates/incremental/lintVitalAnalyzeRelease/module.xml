@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="C:\Users\palan\OneDrive\Desktop\NEW\fitness\plugins\simple_animation_progress_bar-1.9.2\android"
+    name=":simple_animation_progress_bar"
+    type="LIBRARY"
+    maven="com.example.simple_aniatiom_progress_bar.simple_animation_progress_bar:simple_animation_progress_bar:1.0-SNAPSHOT"
+    agpVersion="8.7.0"
+    buildFolder="C:\Users\palan\OneDrive\Desktop\NEW\fitness\build\simple_animation_progress_bar"
+    bootClassPath="C:\Users\palan\AppData\Local\Android\Sdk\platforms\android-31\android.jar;C:\Users\palan\AppData\Local\Android\Sdk\build-tools\34.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-31"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

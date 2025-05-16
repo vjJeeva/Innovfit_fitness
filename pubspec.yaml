@@ -1,0 +1,41 @@
+name: fitness
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  carousel_slider: ^5.0.0
+  fl_chart: ^0.68.0
+  simple_animation_progress_bar:
+    path: plugins/simple_animation_progress_bar-1.9.2
+  dotted_dashed_line: ^0.0.3
+  simple_circular_progress_bar: ^1.0.2
+  animated_toggle_switch: ^0.8.5
+  readmore: ^3.0.0
+  calendar_agenda:
+    path: dev_lib/calendar_agenda/
+  intl: ^0.18.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/img/
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/font/Poppins-Regular.ttf
+        - asset: assets/font/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/font/Poppins-Bold.ttf
+          weight: 700

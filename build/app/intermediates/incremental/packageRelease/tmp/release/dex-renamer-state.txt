@@ -1,0 +1,4 @@
+#Fri May 16 19:27:50 IST 2025
+base.0=C\:\\Users\\palan\\OneDrive\\Desktop\\NEW\\fitness\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
