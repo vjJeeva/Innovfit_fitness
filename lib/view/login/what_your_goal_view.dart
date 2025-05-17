@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:fitness/view/login/welcome_view.dart';
+// import 'package:fitness/view/login/welcome_view.dart';
 import 'package:flutter/material.dart';
+import "package:fitness/view/new_start/new_start.dart";
 
 import '../../common/colo_extension.dart';
 import '../../common_widget/round_button.dart';
@@ -137,7 +138,7 @@ class _WhatYourGoalViewState extends State<WhatYourGoalView> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const WelcomeView()));
+                              builder: (context) => const NewStart()));
                     }),
               ],
             ),

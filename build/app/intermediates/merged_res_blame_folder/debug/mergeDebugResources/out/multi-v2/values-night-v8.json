@@ -4,7 +4,7 @@
             "outputFile": "com.example.fitness.app-mergeDebugResources-24:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\palan\\OneDrive\\Desktop\\NEW\\fitness\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "C:\\Users\\palan\\OneDrive\\Desktop\\git\\fitness\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
