@@ -11,9 +11,7 @@ class NewStart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
-      ),
+      debugShowCheckedModeBanner: false,
       home: const WelcomeScreen2(),
     );
   }
@@ -86,7 +84,9 @@ class WelcomeScreen2 extends StatelessWidget {
                 onTap: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => const MainTabView()), // <-- Make sure to import MainTab
+                    MaterialPageRoute(
+                      builder: (context) => const MainTabView(),
+                    ),
                   );
                 },
                 child: Container(
@@ -115,6 +115,3 @@ class WelcomeScreen2 extends StatelessWidget {
     );
   }
 }
-
-// import your MainTab.dart and make sure it has a const constructor
-// Example: const MainTab()

@@ -1,7 +1,8 @@
 import 'package:fitness/common_widget/round_button.dart';
-import 'package:fitness/view/meal_planner/meal_planner_view.dart';
+// import 'package:fitness/view/meal_planner/meal_planner_view.dart';
 import 'package:fitness/view/workout_tracker/workout_tracker_view.dart';
 import 'package:flutter/material.dart';
+import 'package:fitness/view/meal_planner/meal_plan_choice.dart';
 
 import '../sleep_tracker/sleep_tracker_view.dart';
 
@@ -37,7 +38,7 @@ class SelectView extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const MealPlannerView(),
+                      builder: (context) => const MealPlanChoiceContent(),
                     ),
                   );
                 }),

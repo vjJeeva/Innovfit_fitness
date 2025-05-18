@@ -31,6 +31,10 @@ flutter:
   uses-material-design: true
   assets:
     - assets/img/
+    - assets/img/top_wave.png
+    - assets/img/weight_loss1.png
+    - assets/img/weight_gain1.png
+    - assets/img/muscle_gain1.png
   fonts:
     - family: Poppins
       fonts:
