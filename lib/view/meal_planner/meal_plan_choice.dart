@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import "package:fitness/view/meal_planner/meal_planner_view.dart";
+import "package:fitness/view/meal_planner/day_measure.dart";
+import "package:fitness/view/recipes/recipes_list_screen.dart";
 
 class MealPlanChoiceContent extends StatelessWidget {
   const MealPlanChoiceContent({Key? key}) : super(key: key);
@@ -62,7 +64,7 @@ class MealPlanChoiceContent extends StatelessWidget {
                       imagePath: "assets/img/weight_loss1.png",
                       onTap: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (_) => MealPlannerView()));
+                            MaterialPageRoute(builder: (_) => DayMeasure()));
                       },
                     ),
                     const SizedBox(height: 16),
@@ -73,7 +75,7 @@ class MealPlanChoiceContent extends StatelessWidget {
                       imagePath: "assets/img/weight_gain1.png",
                       onTap: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (_) => MealPlannerView()));
+                            MaterialPageRoute(builder: (_) => RecipesListScreen()));
                       },
                     ),
                     const SizedBox(height: 16),

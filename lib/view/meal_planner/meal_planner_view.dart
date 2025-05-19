@@ -35,7 +35,9 @@ class _MealPlannerViewState extends State<MealPlannerView> {
       "image": "assets/img/m_3.png",
       "number": "120+ Foods"
     },
-    {"name": "Lunch", "image": "assets/img/m_4.png", "number": "130+ Foods"},
+    {"name": "Lunch", 
+    "image": "assets/img/m_4.png", 
+    "number": "130+ Foods"},
   ];
 
   @override
