@@ -9,6 +9,7 @@ import '../../common/colo_extension.dart';
 import 'activity_tracker_view.dart';
 import 'finished_workout_view.dart';
 import 'notification_view.dart';
+import '../bmi_calculator/bmi_home_screen.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -197,15 +198,25 @@ class _HomeViewState extends State<HomeView> {
                               SizedBox(
                                 height: media.width * 0.05,
                               ),
-                              SizedBox(
-                                  width: 120,
-                                  height: 35,
-                                  child: RoundButton(
-                                      title: "View More",
-                                      type: RoundButtonType.bgSGradient,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400,
-                                      onPressed: () {}))
+                           SizedBox(
+                            width: 120,
+                            height: 35,
+                            child: RoundButton(
+                            title: "View More",
+                            type: RoundButtonType.bgSGradient,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            onPressed: () {
+                            Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                            builder: (context) => const BmiHomeScreen(),
+                            ),
+                            );
+                            },
+                            ),
+                          )
+
                             ],
                           ),
                           AspectRatio(
