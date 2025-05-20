@@ -20,8 +20,29 @@ class MealPlanChoiceContent extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
+          // Back button added here
           Positioned(
-            top: 60,
+            top: 40,
+            left: 16,
+            child: InkWell(
+              onTap: () => Navigator.pop(context),
+              borderRadius: BorderRadius.circular(10),
+              child: Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.8),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const Icon(
+                  Icons.arrow_back_ios,
+                  size: 20,
+                  color: Colors.black87,
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 90,
             left: 16,
             right: 16,
             child: Column(
@@ -49,7 +70,7 @@ class MealPlanChoiceContent extends StatelessWidget {
             ),
           ),
           Positioned.fill(
-            top: 220,
+            top: 240,
             child: SafeArea(
               child: SingleChildScrollView(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -74,8 +95,12 @@ class MealPlanChoiceContent extends StatelessWidget {
                       description: "Balanced plan to gain healthy weight.",
                       imagePath: "assets/img/weight_gain1.png",
                       onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (_) => RecipesListScreen()));
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => RecipesListScreen(mealPlanType: "weight-gain"),
+                          ),
+                        );
                       },
                     ),
                     const SizedBox(height: 16),

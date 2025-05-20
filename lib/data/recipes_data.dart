@@ -1,44 +1,47 @@
-import '../models/recipe.dart';
+import "package:fitness/models/recipe.dart" ;
 
 final List<Recipe> allRecipes = [
   Recipe(
     id: '1',
     title: 'Overnight soaked almonds',
-    imagePath: 'assets/almonds.jpg',
+    imagePath: 'assets/img/almonds.png',
     time: '5 min prep | 8 hrs soak',
     shortInfo: 'Rich in healthy fats and protein',
-    fullRecipe: '1. Soak 10 almonds and 2 walnuts in water overnight\n'
-        '2. Drain water in the morning\n'
-        '3. Consume on empty stomach',
-    ingredients: ['10 almonds', '2 walnuts', '1 cup water'],
+    fullRecipe: 'Pancakes are some people\'s favorite breakfast...',
+    ingredients: [
+      Ingredient(
+        name: "Almonds", 
+        amount: "10 pieces", 
+        imagePath: "assets/img/almonds.png"
+      ),
+      Ingredient(
+        name: "Walnuts", 
+        amount: "2 pieces", 
+        imagePath: "assets/img/walnuts.png"
+      ),
+    ],
     mealTime: 'early-morning',
+    planType: 'weight-gain',
+    nutrition: [
+      NutritionInfo(
+        title: "180kCal", 
+        imagePath: "assets/img/burn.png"
+      ),
+      NutritionInfo(
+        title: "30g fats", 
+        imagePath: "assets/img/egg.png"
+      ),
+    ],
+    steps: [
+      RecipeStep(
+        number: "1", 
+        detail: "Prepare all ingredients"
+      ),
+      RecipeStep(
+        number: "2", 
+        detail: "Soak overnight"
+      ),
+    ],
   ),
-  Recipe(
-    id: '2',
-    title: 'Banana Milkshake',
-    imagePath: 'assets/banana_shake.jpg',
-    time: '5 min prep',
-    shortInfo: 'High calorie healthy drink',
-    fullRecipe: '1. Peel and slice 1 ripe banana\n'
-        '2. Add to blender with 1 cup milk\n'
-        '3. Add 1 tbsp honey or dates\n'
-        '4. Blend until smooth',
-    ingredients: ['1 banana', '1 cup milk', '1 tbsp honey'],
-    mealTime: 'early-morning',
-  ),
-  Recipe(
-    id: '2',
-    title: 'Banana Milkshake',
-    imagePath: 'assets/banana_shake.jpg',
-    time: '5 min prep',
-    shortInfo: 'High calorie healthy drink',
-    fullRecipe: '1. Peel and slice 1 ripe banana\n'
-        '2. Add to blender with 1 cup milk\n'
-        '3. Add 1 tbsp honey or dates\n'
-        '4. Blend until smooth',
-    ingredients: ['1 banana', '1 cup milk', '1 tbsp honey'],
-    mealTime: 'breakfast',
-  ),
-  
   // Add more recipes...
 ];

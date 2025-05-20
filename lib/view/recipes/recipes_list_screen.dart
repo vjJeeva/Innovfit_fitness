@@ -1,27 +1,35 @@
 import 'package:flutter/material.dart';
-import "../../models/recipe.dart";
+import '../../models/recipe.dart';
 import '../../data/recipes_data.dart';
-import 'recipe_detail_screen.dart';
+import './recipe_detail_view.dart';
 
 class RecipesListScreen extends StatelessWidget {
-  const RecipesListScreen({super.key});
+  final String mealPlanType;
+  
+  const RecipesListScreen({
+    super.key,
+    required this.mealPlanType,
+  });
 
   List<Recipe> _getRecipesByMealTime(String mealTime) {
-    return allRecipes.where((recipe) => recipe.mealTime == mealTime).toList();
+    return allRecipes.where((recipe) => 
+      recipe.mealTime == mealTime && 
+      recipe.planType == mealPlanType
+    ).toList();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Weight Gain Recipes'),
+        title: Text('${mealPlanType.replaceAll('-', ' ').toTitleCase()} Recipes'),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             _buildMealSection(context, 'Early Morning', _getRecipesByMealTime('early-morning')),
             _buildMealSection(context, 'Breakfast', _getRecipesByMealTime('breakfast')),
-            // Add more sections...
+            // Add more sections as needed
           ],
         ),
       ),
@@ -75,6 +83,11 @@ class RecipesListScreen extends StatelessWidget {
                 height: 100,
                 width: double.infinity,
                 fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) => 
+                  Container(
+                    color: Colors.grey[200],
+                    child: const Icon(Icons.fastfood, size: 40),
+                  ),
               ),
             ),
             Padding(
@@ -86,6 +99,7 @@ class RecipesListScreen extends StatelessWidget {
                     recipe.title,
                     style: const TextStyle(fontWeight: FontWeight.bold),
                     maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                   ),
                   Text(
                     recipe.time,
@@ -104,8 +118,19 @@ class RecipesListScreen extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => RecipeDetailScreen(recipe: recipe),
+        builder: (context) => RecipeDetailView(
+          recipe: recipe,
+          mObj: {"name": recipe.mealTime}, // Pass your meal object here
+        ),
       ),
     );
+  }
+}
+
+extension StringExtension on String {
+  String toTitleCase() {
+    return split(' ').map((str) => 
+      str.isNotEmpty ? str[0].toUpperCase() + str.substring(1) : ''
+    ).join(' ');
   }
 }
